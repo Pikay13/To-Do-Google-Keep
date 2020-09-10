@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Note</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <Section id="inputsection">
+            <div class="first">
+                <i class="icon fa fa-bars"></i>
+                <h1>Note</h1>
+            </div>
+            <div class="second">
+                <i class="fa fa-search" id="srch"></i>
+                <input class="input-field" type="text" placeholder="Search" name="usrnm">
+            </div>
+            <div class="third">
+                <i class="icon fa fa-refresh" value="Refresh" onclick="history.go(0)"></i>
+                <i class="icon fa fa-cog"></i>
+            </div>
+        </Section>
+
+        <hr>
+
+        <ul id="lefticons">
+            <li class="sidebarItem1"><i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+                <p> Notes </p>
+            </li>
+            <li class="sidebarItem2"><i class="fa fa-bell-o" aria-hidden="true"></i>
+                <p> Reminders </p>
+            </li>
+            <li class="sidebarItem3"><i class="fa fa-pencil" aria-hidden="true"></i>
+                <p> Edit </p>
+            </li>
+            <li class="sidebarItem4"><i class="fa fa-archive" aria-hidden="true"></i>
+                <p> Archive </p>
+            </li>
+            <li class="sidebarItem5"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                <p> Bin </p>
+            </li>
+        </ul>
+
+        <section id="displaySection">
+            <div class="container1">
+                <div class="inputbox">
+                    <input id="title" type="text" placeholder="Title">
+                    <input id="todoinput" type="text" placeholder="Take a note...">
+                </div>
+                <button class="footerbtn" type="button" onclick="todoList()">Close</button>
+            </div>
+
+            <ol class="itembox" id="todoList"></ol>
+
+            <div id="largeSign">
+                <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+                <p>Notes you add appear here</p>
+            </div>
+        </section>
+
+        <template id="oh">
+            <div class="container2">
+                <p class="para"></p>
+                <button class="removeBtn" onclick="this.parentNode.remove()"><i class="fa fa-trash-o"
+                        aria-hidden="true"></i></button>
+            </div>
+        </template>
+
+        <div class="edit">
+            <p>Edit labes</p>
+            <div class="edit-mid">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <input type="text" placeholder="Create a label">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+            <hr>
+            <button class="">Done</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
