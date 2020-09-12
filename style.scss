@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
 }
 
 body {
-    display: block;
+    height: 100vh;
     background: #202124;
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -18,9 +19,8 @@ body {
     justify-content: center;
 }
 
-hr {
+hr{
     border: 1px solid #5F6368;
-
 }
 
 .first {
@@ -49,7 +49,7 @@ hr {
 }
 
 .second {
-    margin-left: 100px;
+    margin-left: 8rem;
     position: relative;
 
     &:focus-within {
@@ -110,6 +110,8 @@ hr {
 }
 
 #lefticons {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100%;
     background: #202124;
@@ -204,14 +206,12 @@ hr {
             display: flex;
             flex-direction: column;
             height: fit-content;
+            margin: 1rem;
             border: 1px solid #525356;
             border-radius: 8px;
             padding: 10px;
             color: #E8E9E9;
             letter-spacing: 1px;
-            .para{
-
-            }
         .removeBtn{
             display: flex;
             visibility: hidden;
@@ -269,14 +269,22 @@ hr {
     }
 
 }
-
-.edit{
+.edit-section{
     display: none;
-    flex-direction: column;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background: #20212460;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    padding-top: 100px;
+}
+.edit{
     padding: 25px;
     color: #E8E9E9;
     background: #2F3134;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.15);
     width: fit-content;
     .edit-mid{
         i{
@@ -320,5 +328,112 @@ hr {
         &:active{
                 background: #2F3134;
             }
+    }
+}
+
+
+@media only screen and (max-width: 420px){
+    body{
+        font-size: 16px;
+    }
+    #inputsection{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .first {
+            margin-left: 13px;
+        .fa-bars {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            font-weight: 100;
+            }   
+         h1 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            }
+        }
+        .second{
+            display: flex;
+            align-items: center;
+            margin-left: 1.9rem;
+            
+            #srch{
+                margin: auto 10px;
+                padding: 0;
+            }
+            input{
+                padding: 10px;
+                padding-left: 2.1rem;
+            }
+        }
+        .third{
+            margin: 0 0 0 1rem;
+            i{
+                margin: 0;
+                font-size: 1rem;
+                padding: 0.5rem;
+                
+            }
+        }
+    }
+
+    #lefticons{
+        display: flex;
+        padding: 0;
+        i {
+        margin: 10px 0;
+        color: #9aa0a6;
+        font-size: 1rem;
+        text-align: center;
+        }
+        p {
+        display: none;
+        font-size: 0.7rem;
+        }
+        li {
+            padding: 0;
+        }       
+    }
+
+    #displaySection{
+        .container1{
+            margin: 20px auto;
+            width: fit-content;
+            .inputbox{
+                width: 100%;
+            }
+            .footerbtn{
+                margin: 0 0.7rem 0.7rem auto; 
+                padding: 0;
+                }
+        }
+        .itembox{
+            display: flex;
+            margin-left: 2rem;
+            .container2{
+                margin: 0.5rem;
+                padding: 5px;
+                .para{
+                    font-size: 0.8rem;
+                    font-weight: 200;
+                }
+                .removeBtn{
+                    margin: 0 0 0 auto;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .edit-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .edit{
+            padding: 0.5rem ;
+            .edit-mid{
+                display: flex;
+            }
+        }
     }
 }

@@ -1,23 +1,4 @@
-/*
-function todoList(){
-    var item = document.getElementById("todoinput");
-    if(item.value != ""){
-    var removeBtn = document.createElement("button");
-    removeBtn.classList.add("removebtn");
-    removeBtn.textContent = "Delete";
-    var addBtn = document.querySelector(".addbtn");
-    var newItem = document.createElement("li");
-    newItem.textContent = item.value;
-    newItem.classList.add("container2");
-    newItem.append(removeBtn);
-    document.querySelector("#todoList").append(newItem);
-    item.value = "";
-            removeBtn.onclick=() => {
-                newItem.remove();
-            }
-}
-}
-*/
+
 window.onload = function () {
     item.focus();
 };
@@ -46,6 +27,7 @@ item.addEventListener("keyup", (e) => {
         todoList();
     }
 })
+
 function show() {
     title.style.display = "flex";
     footerbtn.style.display = "flex";
@@ -70,4 +52,15 @@ document.addEventListener("click", (evt) => {
         }
         activeElement = evt.target.closest(".sidebarItem");
     }
+    if (evt.target.closest(".sidebarItem3")) {
+        document.querySelector(".edit-section").style.display = "flex"
+    }
+    else if (!evt.target.closest(".edit")) {
+        document.querySelector(".edit-section").style.display = "none"
+    }
 });
+document.querySelector(".doneBtn").addEventListener("click", hideEdit);
+function hideEdit() {
+    document.querySelector(".edit-section").style.display = "none";
+};
+

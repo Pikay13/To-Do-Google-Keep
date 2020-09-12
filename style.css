@@ -3,10 +3,11 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
 }
 
 body {
-  display: block;
+  height: 100vh;
   background: #202124;
   font-family: 'Roboto', sans-serif;
   position: relative;
@@ -61,7 +62,7 @@ hr {
 }
 
 .second {
-  margin-left: 100px;
+  margin-left: 8rem;
   position: relative;
 }
 
@@ -123,6 +124,13 @@ hr {
 }
 
 #lefticons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   height: 100%;
   background: #202124;
@@ -253,6 +261,7 @@ hr {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin: 1rem;
   border: 1px solid #525356;
   border-radius: 8px;
   padding: 10px;
@@ -320,16 +329,28 @@ hr {
   background: #525356;
 }
 
-.edit {
+.edit-section {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #20212460;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  position: absolute;
+  padding-top: 100px;
+}
+
+.edit {
   padding: 25px;
   color: #E8E9E9;
   background: #2F3134;
+  -webkit-box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.15);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -384,5 +405,129 @@ hr {
 
 .edit button:active {
   background: #2F3134;
+}
+
+@media only screen and (max-width: 420px) {
+  body {
+    font-size: 16px;
+  }
+  #inputsection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #inputsection .first {
+    margin-left: 13px;
+  }
+  #inputsection .first .fa-bars {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  #inputsection .first h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  #inputsection .second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 1.9rem;
+  }
+  #inputsection .second #srch {
+    margin: auto 10px;
+    padding: 0;
+  }
+  #inputsection .second input {
+    padding: 10px;
+    padding-left: 2.1rem;
+  }
+  #inputsection .third {
+    margin: 0 0 0 1rem;
+  }
+  #inputsection .third i {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  #lefticons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  #lefticons i {
+    margin: 10px 0;
+    color: #9aa0a6;
+    font-size: 1rem;
+    text-align: center;
+  }
+  #lefticons p {
+    display: none;
+    font-size: 0.7rem;
+  }
+  #lefticons li {
+    padding: 0;
+  }
+  #displaySection .container1 {
+    margin: 20px auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #displaySection .container1 .inputbox {
+    width: 100%;
+  }
+  #displaySection .container1 .footerbtn {
+    margin: 0 0.7rem 0.7rem auto;
+    padding: 0;
+  }
+  #displaySection .itembox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 2rem;
+  }
+  #displaySection .itembox .container2 {
+    margin: 0.5rem;
+    padding: 5px;
+  }
+  #displaySection .itembox .container2 .para {
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+  #displaySection .itembox .container2 .removeBtn {
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+  .edit-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .edit-section .edit {
+    padding: 0.5rem;
+  }
+  .edit-section .edit .edit-mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */
